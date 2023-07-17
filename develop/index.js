@@ -16,6 +16,8 @@ function writeSVG(fileName, data) {
 
 function responseHandler(response) {
     const chosenShape = response.shape;
+    const initials = response.initials;
+    const textColor = response.textColor;
     var shape;
     if(chosenShape === "Triangle"){
         shape = new shapes.Triangle;
@@ -25,7 +27,8 @@ function responseHandler(response) {
         shape = new shapes.Circle;
     }
     shape.setColor(response.shapeColor);
-    writeSVG('output.svg', shape.render());
+    const output = `${shape.render()}<text x="100" y="170" font-size="4em" fill="${textColor}">${initials}</text>`
+    writeSVG('output.svg', output);
 }
 
 inquirer.prompt([

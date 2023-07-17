@@ -3,4 +3,5 @@
      xmlns="http://www.w3.org/2000/svg">
 
   <circle cx="150" cy= "150" r="100" fill="blue" />
+  <text x="100" y="160" font-size="4em" fill="red">SVG</text>
 </svg>
