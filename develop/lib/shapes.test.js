@@ -8,7 +8,7 @@ describe('Triangle', () => {
         it('should output an SVG string using the color provided', () => {
             const shape = new Triangle();
             shape.setColor("red");
-            expect(shape.render()).toEqual('<polygon points="150, 50 244, 200 56, 200" fill="red" />');
+            expect(shape.render()).toEqual('<polygon points="150, 10 260, 180 40, 180" fill="red" />');
         });
     });
 });
@@ -17,7 +17,7 @@ describe('Square', () => {
         it('should output an SVG string using the color provided', () => {
             const shape = new Square();
             shape.setColor("red");
-            expect(shape.render()).toEqual('<polygon points="50, 50 250, 50 250, 250 50, 250" fill="red" />');
+            expect(shape.render()).toEqual('<polygon points="50, 20 250, 20 250, 180 50, 180" fill="red" />');
         });
     });
 });
@@ -26,7 +26,7 @@ describe('Circle', () => {
         it('should output an SVG string using the color provided', () => {
             const shape = new Circle();
             shape.setColor("red");
-            expect(shape.render()).toEqual('<circle cx="150" cy= "150" r="100" fill="red" />');
+            expect(shape.render()).toEqual('<circle cx="150" cy= "100" r="100" fill="red" />');
         });
     });
 });

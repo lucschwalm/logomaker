@@ -5,7 +5,7 @@ const shapes = require("./lib/shapes.js");
 function writeSVG(fileName, data) {
     fs.appendFile(fileName, 
         `<svg version="1.1"
-     width="300" height="300"
+     width="300" height="200"
      xmlns="http://www.w3.org/2000/svg">
      ${data}
      </svg>`
@@ -27,8 +27,9 @@ function responseHandler(response) {
         shape = new shapes.Circle;
     }
     shape.setColor(response.shapeColor);
-    const output = `${shape.render()}<text x="100" y="170" font-size="4em" fill="${textColor}">${initials}</text>`
-    writeSVG('output.svg', output);
+    const output = `${shape.render()}<text x="100" y="120" font-size="4em" fill="${textColor}">${initials}</text>`
+    writeSVG('logo.svg', output);
+    console.log("Generated logo.svg");
 }
 
 inquirer.prompt([
